@@ -1,2 +1,1 @@
-# minecraft-alaina
-CS 175
+# gh-skeleton
