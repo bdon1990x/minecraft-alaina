@@ -17,9 +17,9 @@ We plan on using supervised learning
 
 #### Quantitative:
 
-Completeness of the building. Is every block arranged correctly? Is any part of the structure missing?
-Time the agent take to finish the task.
-Mistakes the agent made through the process.
+- Completeness of the building. Is every block arranged correctly? Is any part of the structure missing?
+  Time the agent take to finish the task.
+- Mistakes the agent made through the process.
 
 #### Qualitative:
 
