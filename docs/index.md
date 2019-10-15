@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-[Source code] (https://github.com/bdon1990x/minecraft-alaina)
+[Source code](https://github.com/bdon1990x/minecraft-alaina)
 
 Reports:
 
