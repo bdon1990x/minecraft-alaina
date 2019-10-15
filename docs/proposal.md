@@ -2,14 +2,14 @@
 layout: default
 title: Proposal
 ---
-## Summary of the Project
+# Summary of the Project
 
 
-## AI/ML Algorithms
+# AI/ML Algorithms
 
 
-## Evaluation Plan
+# Evaluation Plan
 
 
-## Appointment with the Instructor
+# Appointment with the Instructor
 Time: 09:30 am Oct 16, 2019
