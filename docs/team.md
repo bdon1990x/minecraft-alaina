@@ -3,14 +3,14 @@ layout: default
 title:  Team
 ---
 
-# {{ page.title }}
+## {{ page.title }}
 
 
-# Brandon Truong Luong
+### Brandon Truong Luong
 ***UCI Net ID***: btluong1
 
-# Tanveer Bains
+### Tanveer Bains
 ***UCI Net ID***: tanveerb
 
-# Tianran Liu
+### Tianran Liu
 ***UCI Net ID***: tianral4
