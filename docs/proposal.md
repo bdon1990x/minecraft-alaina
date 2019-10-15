@@ -11,7 +11,7 @@ The idea we have chosen is an AI that is able to build different types of struct
 
 ### AI/ML Algorithms
 
-We plan on using supervised learning
+We plan on using supervised learning.
 
 ### Evaluation Plan
 
