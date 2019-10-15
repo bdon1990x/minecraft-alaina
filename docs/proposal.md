@@ -11,7 +11,21 @@ The idea we have chosen is creating an AI that is able to build different types 
 
 ### AI/ML Algorithms
 
+We plan on using supervised learning
+
 ### Evaluation Plan
+
+#### Quantitative:
+
+Completeness of the building. Is every block arranged correctly? Is any part of the structure missing?
+Time the agent take to finish the task.
+Mistakes the agent made through the process.
+
+#### Qualitative:
+
+- The project will start from a limited choices of parameters (probably one or two), to see whether the agent could build the house successfully. For example, the description could be “a bungalow with a window and a door”.
+- If the agent could make it, we then start to enlarge the scale of our dataset, and be open for various parameters in descriptions, like the materials and texture of the structure.
+- The moonshot case would be that we give it pretty ambiguous descriptions, like “a baroque-style house with a living room and two bedrooms” or “a shiny tower from which I can see the whole city”.
 
 ### Appointment with the Instructor
 
