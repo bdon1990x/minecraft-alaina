@@ -2,10 +2,18 @@
 layout: default
 title:  Home
 ---
+## Alaina
 
-[Source code](https://github.com/bdon1990x/minecraft-alaina)
+Let's welcome our 3D objects builder in Minecraft: Alaina!
 
-Reports:
+![image1](Images/Code_Builder.png?raw=true)
+
+Source code: [Github](https://github.com/bdon1990x/minecraft-alaina)
+
+## Project Summary - Status
+
+
+## Reports:
 
 - [Proposal](proposal.html)
 - [Status](status.html)
