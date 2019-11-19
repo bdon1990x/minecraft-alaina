@@ -34,8 +34,8 @@ The discrimator model is composed of several transposed convolutional layers. It
 In terms of qualitative evaluations, we would like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does it resemble the desired item?', or 'Is the object structurally sound?'
 
 As for quantitative evualuations we will look at the training time of model.  
-Here is an example of a chair we have generated with our current model:
-![image1](Images/Status_Chair.PNG?raw=true)  
+Here is an example of a chair we have generated with our current model:  
+![image1](Images/Status_Chair.png?raw=true)  
 From this image we can see that the chair is starting to take form, but it obviously missing some clear features, as well as generally being very noisy.
 
 ## Remaining Goals and Challenges
