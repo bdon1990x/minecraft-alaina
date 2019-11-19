@@ -7,7 +7,10 @@ title: Proposal
 
 ### Summary of the Project
 
-Our project is to train a generative adversial network to build 3D object in Minecraft. We will start with generating chairs, and expand to other types of objects as time permits. Lastly we will implement text commands which will determine the type of object being generated.
+The goal of our project was to generate 3D structures using a generative adversial network(GAN). Our AI "Alaina" will parse the input text for
+keywords which will be used to identify the type of object being generated. After the type of object has been decided the appropriate pre-trained
+model will be loaded and the generative model is inputted with random noise. The output of the generative model will be a 3D matrix consisting
+of a probability for each value. The probabilities are rounded and the model is then rendered. 0's will be interpretted as an empty space while 1's will be interpretted as occupied space.
 
 ### AI/ML Algorithms
 
@@ -20,9 +23,13 @@ We plan on using generative adversial networks. The dataset will be a set of 3D 
 - Time the agent take to finish the task.
 - Mistakes the agent made through the process.
 
+As for quantitative evualuations we will look at the training time of model.  
+
 #### Qualitative:
 
 - Completeness of the building. Is every block arranged correctly? Is any part of the structure missing?
+
+In terms of qualitative evaluations, we would like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does it resemble the desired item?', or 'Is the object structurally sound?'
 
 ### Appointment with the Instructor
 
