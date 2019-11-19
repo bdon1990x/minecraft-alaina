@@ -3,6 +3,9 @@ layout: default
 title: Status
 ---
 
+## Video
+[![Titile](/Images/FirstPage.png)](https://youtu.be/eLTgYg-6Mcw "Alaina: Status Report")
+
 ## Summary
 
 The goal of our project was to generate 3D structures using a generative adversial network(GAN). Our AI "Alaina" will parse the input text for
