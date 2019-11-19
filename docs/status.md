@@ -12,7 +12,14 @@ of a probability for each value. The probabilities are rounded and the model is 
 
 ## Approach
 
-We started by using a dataset of 3D objects (chairs) in the Object File Format (.off). The format is used for representing a geometric figure by specifying the surface polygons of the model. The format of a .off file is fairly simple: a list of all vertices, followed by a list of faces with the corresponding vertices. The .off objects were then converted to voxels using our own Python scripts. The scripts work by determing whether a voxel lies on a surface of the mesh. First the dimensions of the 3D mesh are scaled to fit within a 30x30x30 grid. The surfaces of the mesh are then converted into voxels by checking whether nearby points overlap with the given surface. We can check whether they overlap by calculating the normal vector of the surface, and projecting the possible points onto this vector. If the magnitude of the projected vector is with a certain threshold this means the point exists on the same plane as the surface. However, to check whether the point actually exists within the bounds of the surface we then calculate the barycentric coordinates of that points in relation to the surface. If all of the barycentrics coordinates are positive this means the point is within the bounds of the surface. If both of these conditions are true then a voxel is placed at the points. The output of the script is a 3D matrix with dimensions of 30x30x30; the matrix is binary encoded, meaning that the entries that are 0 signify an empty block and the entries that are 1 signify a cube.
+We started by using a dataset of 3D objects (chairs) in the Object File Format (.off). The format is used for representing a geometric figure by specifying the surface polygons of the model. The format of a .off file is fairly simple: a list of all vertices, followed by a list of faces with the corresponding vertices. The .off objects were then converted to voxels using our own Python scripts. The scripts work by determing whether a voxel lies on a surface of the mesh. First the dimensions of the 3D mesh are scaled to fit within a 30x30x30 grid.
+The surfaces of the mesh are then converted into voxels by checking whether nearby points overlap with the given surface. We can check whether they overlap by calculating the normal vector of the surface, and projecting the possible points onto this vector. If the magnitude of the projected vector is with a certain threshold this means the point exists on the same plane as the surface.
+However, to check whether the point actually exists within the bounds of the surface we then calculate the barycentric coordinates of that points in relation to the surface. If all of the barycentrics coordinates are positive this means the point is within the bounds of the surface.
+Here is are the equations used in these calculations:
+
+![image1](Images/Barycentric_Points.PNG?raw=true)
+
+If both of these conditions are true then a voxel is placed at the points. The output of the script is a 3D matrix with dimensions of 30x30x30; the matrix is binary encoded, meaning that the entries that are 0 signify an empty block and the entries that are 1 signify a cube.
 
 GANs operate by learn through supervised learning. mean they need an existing dataset to train on. GANs are made up of two networks, generative and discriminative. The 2 networks are in competition constantly trying to outsmart the other. While the generator learns to create models that fool the discriminator, the discriminator gets better at spotting fakes.
 
@@ -20,10 +27,9 @@ The generator model is composed of several convolutional layers. It takes in a r
 
 ![image1](Images/Binary_Cross_entropy.PNG?raw=true)
 
-## evaluation
+The discrimator model is composed of several transposed convolutional layers. It takes in a 30x30x30 matrix as input and output the probability of whether the input was fake. This model also use an Adam optimizer, as well as binary cross entropy to calculate loss.
 
-- quantitative: ?
-- qualitative: ?
+## evaluation
 
 We are currently opting for a more qualitative approach. We'd like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does the structure look like a first-party item or does it look tacked on?'
 
