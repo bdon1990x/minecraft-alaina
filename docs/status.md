@@ -36,11 +36,11 @@ In terms of qualitative evaluations, we would like to evaluate the generated str
 As for quantitative evualuations we will look at the training time of model.  
 Here is an example of a chair we have generated with our current model:  
 ![image1](Images/Status_Chair.png?raw=true)  
-From this image we can see that the chair is starting to take form, but it obviously missing some clear features, as well as generally being very noisy.
+From this image we can see that the chair is starting to take form, but it obviously missing some features, as well as generally being very noisy.
 
 ## Remaining Goals and Challenges
 
-Our goals are for the future include further refinining our training model to achieve better look results, and expanding the versality of our model to handle multiple types of objects besides just chairs. Lastly if time permits we want to implement text commands, which will generate an item depends on a text input.
+Our goals are for the future include further refinining our training model to achieve better looking results, and expanding the versality of our model to handle multiple types of objects besides just chairs. Lastly if time permits we want to implement text commands, which will generate an item depends on a text input.
 
 A possible challenge we may have is that there is too much variation in our dataset. In particular chairs have extreme variations in form. For example, some may be round, some are rectangular, some have legs, some have wheels, etc... This could potentially be overcome by increasing training time.
 
