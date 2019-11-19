@@ -35,7 +35,7 @@ In terms of qualitative evaluations, we would like to evaluate the generated str
 
 As for quantitative evualuations we will look at the training time of model.  
 Here is an example of a chair we have generated with our current model:
-![image1](Images/Status_Chair.PNG?raw=true)
+![image1](Images/Status_Chair.PNG?raw=true)  
 From this image we can see that the chair is starting to take form, but it obviously missing some clear features, as well as generally being very noisy.
 
 ## Remaining Goals and Challenges
@@ -51,3 +51,4 @@ A possible challenge we may have is that there is too much variation in our data
 - [binary cross-entropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/binary-crossentropy)
 - [Determing Whether a point exists on a 3D triangular plane](https://math.stackexchange.com/questions/2582202/does-a-3d-point-lie-on-a-triangular-plane)
 - [MNIST GANS](https://www.tensorflow.org/tutorials/generative/dcgan)
+- [ModelNet Dataset](https://modelnet.cs.princeton.edu/)
