@@ -29,23 +29,22 @@ The generator model is composed of several convolutional layers. It takes in a r
 
 The discrimator model is composed of several transposed convolutional layers. It takes in a 30x30x30 matrix as input and output the probability of whether the input was fake. This model also use an Adam optimizer, as well as binary cross entropy to calculate loss.
 
-## evaluation
+## Evaluation
 
-We are currently opting for a more qualitative approach. We'd like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does the structure look like a first-party item or does it look tacked on?'
+In terms of qualitative evaluations, we would like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does it resemble the desired item?', or 'Is the object structurally sound?'
 
-## remaining goals and challenges
+As for quantitative evualuations we will look at the training time of model.  
+Here is an example of a chair we have generated with our current model:
+![image1](Images/Binary_Cross_entropy.PNG?raw=true)
+From this image we can see that the chair is starting to take form, but it obviously missing some clear features, as well as generally being very noisy.
 
-- convert GAN-generated training data to be Malmo-friendly
-- training is a potential challenge due to time required; might need to look into using Azure credits
-- we may possibly expand the model domain to include stuff other than chairs
+## Remaining Goals and Challenges
 
-The main challenge for our group is the amount of time needed to train the GANs. (need epoch time from Brandon). One solution that we are planning to explore is executing training on Azure servers, but we have yet to ask the Professor for the credits.
+Our goals are for the future include further refinining our training model to achieve better look results, and expanding the versality of our model to handle multiple types of objects besides just chairs. Lastly if time permits we want to implement text commands, which will generate an item depends on a text input.
 
-After the GANs, we'll need to convert the generated training data into a Malmo-friendly format, but we don't anticipate this to be very challenging as the generated format is relatively straightforward (flattened binary matrix).
+A possible challenge we may have is that there is too much variation in our dataset. In particular chairs have extreme variations in form. For example, some may be round, some are rectangular, some have legs, some have wheels, etc... This could potentially be overcome by increasing training time.
 
-As for goals, we'd like to expand the model domain so that we can generate models other than chairs.
-
-## resources used
+## Resources Used
 
 - [TensorFlow](https://www.tensorflow.org)
 - [details for .off file format](https://segeval.cs.princeton.edu/public/off_format.html)
