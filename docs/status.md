@@ -49,5 +49,6 @@ As for goals, we'd like to expand the model domain so that we can generate model
 
 - [TensorFlow](https://www.tensorflow.org)
 - [details for .off file format](https://segeval.cs.princeton.edu/public/off_format.html)
-- [binary cross-entropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/binary-crossentropy) -[Determing Whether a point exists on a 3D triangular plane](https://math.stackexchange.com/questions/2582202/does-a-3d-point-lie-on-a-triangular-plane)
+- [binary cross-entropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/binary-crossentropy)
+- [Determing Whether a point exists on a 3D triangular plane](https://math.stackexchange.com/questions/2582202/does-a-3d-point-lie-on-a-triangular-plane)
 - [MNIST GANS](https://www.tensorflow.org/tutorials/generative/dcgan)
