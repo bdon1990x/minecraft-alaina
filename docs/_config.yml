@@ -4,6 +4,8 @@
 title:    'minecraft-alaina'
 subtitle: 'CS 175: Project in AI (in Minecraft)'
 
+baseurl: "/minecraft-alaina"
+url: "https://bdon1990x.github.io"
 
 #########################
 # more settings
