@@ -38,7 +38,9 @@ Our the process for evaluating the performance of our model revolves around look
 
 However, something we noticed was that even if the difference in generated voxel and real voxel loss was loss, this does not always mean the generated voxels look visually appealing. The loss rate tells us how well the model is performing however is not always a good indicator for how well the images look.
 
-For example during this generation, the critic loss rate was about 210.
+For example during this generation, the critic loss rate was about 250.
+
+![image1](Images/final_bad_table.png?raw=true)
 
 In this generation the critic loss rate was about 543.
 
