@@ -22,11 +22,11 @@ Here is are the equations used in these calculations:
 
 If both of these conditions are true then a voxel is placed at the points. The output of the script is a 3D matrix with dimensions of 30x30x30; the matrix is binary encoded, meaning that the entries that are 0 signify an empty block and the entries that are 1 signify a cube.
 
-The model we use is a Wasserstein generative adversial netowrk (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined here:
+The model we use is a Wasserstein generative adversial network (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined here:
 
 ![image1](Images/Wasserstein_Loss.png?raw=true)
 
-By doing so the discriminator is replaced with a critic. Tnstead of determing whether is real or fake the critic will score the input based on the realness of the input. The generator now trains to minimize the difference in score between real and generated voxel models. Overall, this makes the model more stable and less sensitive to changes to hyper parameters and model architecture.
+By doing so the discriminator is replaced with a critic. Instead of determining whether is real or fake the critic will score the input based on the realness of the input. The generator now trains to minimize the difference in score between real and generated voxel models. Overall, this makes the model more stable and less sensitive to changes to hyper parameters and model architecture.
 
 Another difference with WGAN's is that the critic model is actually trained more than the generator model. The reason for this is to ensure the critic is optimally trained through each step of the training. The reason for this is that with WGAN's a the critic must be near optimal otherwise training becomes unstable. A poor critic will lead poor assessments of loss on real and generated voxels, which will cause the generator to train inefficiently. Therefore we need to ensure the critic is near convergence before training the generator.
 
