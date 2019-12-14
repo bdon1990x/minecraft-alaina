@@ -36,6 +36,16 @@ Lastly, we attempted to implement an auxilary conditional GANS (ACGANS) in conju
 
 Our the process for evaluating the performance of our model revolves around looking at the loss rate of each of our models (the critic and generator), and adjusting the model depending upon which model is lacking in strength. Also we access the stability of the model by checking whether the difference between the critic loss rate of real and generated voxels converge.
 
+However, something we noticed was that even if the difference in generated voxel and real voxel loss was loss, this does not always mean the generated voxels look visually appealing. The loss rate tells us how well the model is performing however is not always a good indicator for how well the images look.
+
+For example during this generation, the critic loss rate was about 210.
+
+In this generation the critic loss rate was about 543.
+
+The latter image looks significantly better despite having a worse loss rate. We believe this occurs because of the dataset we used. Our dataset is very limited only have around 900 chair models and 500 table models, and within the dataset the models were heavily varied. For example, some chairs had wheels and rotated where as some other chairs had 4 legs.
+
+Given more time we could have solved this problem by expanding our dataset. A potential approach to this could be reusing data by slightly transforming it. An example of this could be slightsly rotating each 3D model.
+
 ## Resources Used
 
 - [TensorFlow](https://www.tensorflow.org)
