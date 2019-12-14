@@ -36,6 +36,16 @@ Lastly, we attempted to implement an auxilary conditional GANS (ACGANS) in conju
 
 Our the process for evaluating the performance of our model revolves around looking at the loss rate of each of our models (the critic and generator), and adjusting the model depending upon which model is lacking in strength. Also we access the stability of the model by checking whether the difference between the critic loss rate of real and generated voxels converge.
 
+Here you can see a graph of of the critic loss rate of one of our training sessions. (Overall critic loss rate is difference between generated and real loss rate.)
+
+![image1](Images/final_bad_critic.png?raw=true)
+
+From this image we can see the the loss rate becomes more and more erratic as the training goes on. This indicates to us that the training is becoming unstable. This could be causes by several things. The critic may not be optimized enough, in which case we would have to train the critic more. The critic may not be powerful enough, in which case we would add more layers to the critic. In this case we changed tried training critic more. Instead of training the critic 5 timers per generator training we increased this to 10 times. Here are the resuls:
+
+![image1](Images/final_good_critic.png?raw=true)
+
+You can see that this was sucessful because the critic loss rate does become more stable after some more training. The values are no longer diverging and fit within a smaller range.
+
 However, something we noticed was that even if the difference in generated voxel and real voxel loss was loss, this does not always mean the generated voxels look visually appealing. The loss rate tells us how well the model is performing however is not always a good indicator for how well the images look.
 
 For example during this generation, the critic loss rate was about 250.
