@@ -18,13 +18,13 @@ The surfaces of the mesh are then converted into voxels by checking whether near
 However, to check whether the point actually exists within the bounds of the surface we then calculate the barycentric coordinates of that points in relation to the surface. If all of the barycentrics coordinates are positive this means the point is within the bounds of the surface.  
 Here is are the equations used in these calculations:
 
-![image1](Images/Wasserstein_Loss.PNG?raw=true)
+![image1](Images/Barycentric_Points.PNG?raw=true)
 
 If both of these conditions are true then a voxel is placed at the points. The output of the script is a 3D matrix with dimensions of 30x30x30; the matrix is binary encoded, meaning that the entries that are 0 signify an empty block and the entries that are 1 signify a cube.
 
 The model we use is a Wasserstein generative adversial netowrk (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined using this function:
 
-![image1](Images/Barycentric_Points.PNG?raw=true)
+![image1](Images/Wasserstein_Loss.PNG?raw=true)
 
 ## Evaluation
 
