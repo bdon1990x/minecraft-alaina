@@ -30,19 +30,11 @@ By doing so the discriminator is replaced with a critic. Tnstead of determing wh
 
 Another difference with WGAN's is that the critic model is actually trained more than the generator model. In our model we for every time we train the generator model, the critic is trained 5 times. The reason for this is to ensure the critic is optimally trained through each step of the training. The reason for this is that with WGAN's a the critic must be near optimal otherwise training becomes unstable. A poor critic will lead poor assessments of loss on real and generated voxels, which will cause the generator to train inefficiently. Therefore we need to ensure the critic is near convergence before training the generator.
 
-The architecture for the models are mostly unchanged from the status report version. The only notanle change being that the critic model has one more convolutional layer. This is to reinforcement the critic model to ensure good performance, and also because the critic model is also being trained more.
-
 Lastly, we attempted to implement an auxilary conditional GANS (ACGANS) in conjunction with our WGANS. This would have made it possible to train multiple classes of object with a single training model. However, we were not able to achieve good quality results with this model, and instead decided to train 2 seperate WGAN models for chairs and tables.
 
 ## Evaluation
 
-In terms of qualitative evaluations, we would like to evaluate the generated structures by how seamlessly they pass the eye-test. We'd like to ask questions such as, 'Does the structure look at all abnormal?', 'Does it resemble the desired item?', or 'Is the object structurally sound?'
-
-As for quantitative evualuations we will look at the training time of model.
-
-Here is an example of a chair we have generated with our current model:  
-![image1](Images/Status_Chair.png?raw=true)  
-From this image we can see that the chair is starting to take form, but it obviously missing some features, as well as generally being very noisy.
+Our the process for evaluating the performance of our model revolves around looking at the loss rate of each of our models (the critic and generator), and adjusting the model depending upon which model is lacking in strength. Also we access the stability of the model by checking whether the difference between the critic loss rate of real and generated voxels converge.
 
 ## Resources Used
 
