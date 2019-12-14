@@ -44,7 +44,7 @@ In this generation the critic loss rate was about 543.
 
 The latter image looks significantly better despite having a worse loss rate. We believe this occurs because of the dataset we used. Our dataset is very limited only have around 900 chair models and 500 table models, and within the dataset the models were heavily varied. For example, some chairs had wheels and rotated where as some other chairs had 4 legs.
 
-Given more time we could have solved this problem by expanding our dataset. A potential approach to this could be reusing data by slightly transforming it. An example of this could be slightsly rotating each 3D model.
+Given more time we could have solved this problem by expanding our dataset. A potential approach to this could be reusing data by slightly transforming it. An example of this could be slightly rotating each 3D model. This would reduce the variability in the dataset, while also increasing the amount of data.
 
 ## Resources Used
 
