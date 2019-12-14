@@ -61,8 +61,13 @@ The latter image looks significantly better despite having a worse loss rate. We
 Given more time we could have solved this problem by expanding our dataset. A potential approach to this could be reusing data by slightly transforming it. An example of this could be slightly rotating each 3D model. This would reduce the variability in the dataset, while also increasing the amount of data.
 
 Lastly, here are the results of some of our generations rendered in Minecraft:
+Tables:
 ![image1](Images/final_table1.png?raw=true)
 ![image1](Images/final_table2.png?raw=true)
+
+Chairs:
+![image1](Images/final_chair1.png?raw=true)
+![image1](Images/final_chair2.png?raw=true)
 
 ## Resources Used
 
