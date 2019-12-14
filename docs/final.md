@@ -22,9 +22,15 @@ Here is are the equations used in these calculations:
 
 If both of these conditions are true then a voxel is placed at the points. The output of the script is a 3D matrix with dimensions of 30x30x30; the matrix is binary encoded, meaning that the entries that are 0 signify an empty block and the entries that are 1 signify a cube.
 
-The model we use is a Wasserstein generative adversial netowrk (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined using this function:
+The model we use is a Wasserstein generative adversial netowrk (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined here:
 
 ![image1](Images/Wasserstein_Loss.png?raw=true)
+
+By doing so the discriminator is replaced with a critic. Tnstead of determing whether is real or fake the critic will score the input based on the realness of the input. The generator now trains to minimize the difference in score between real and generated voxel models. Overall, this makes the model more stable and less sensitive to changes to hyper parameters and model architecture.
+
+Another difference with WGAN's is that the critic model is actually trained more than the generator model. In our model we for every time we train the generator model, the critic is trained 5 times. The reason for this is to ensure the critic is optimally trained through each step of the training. The reason for this is that with WGAN's a the critic must be near optimal otherwise training becomes unstable. A poor critic will lead poor assessments of loss on real and generated voxels, which will cause the generator to train inefficiently. Therefore we need to ensure the critic is near convergence before training the generator.
+
+The architecture for the models are mostly unchanged from the status report version. The only notanle change being that the critic model has one more convolutional layer. This is to reinforcement the critic model to ensure good performance, and also because the critic model is also being trained more.
 
 ## Evaluation
 
@@ -35,12 +41,6 @@ As for quantitative evualuations we will look at the training time of model.
 Here is an example of a chair we have generated with our current model:  
 ![image1](Images/Status_Chair.png?raw=true)  
 From this image we can see that the chair is starting to take form, but it obviously missing some features, as well as generally being very noisy.
-
-## Remaining Goals and Challenges
-
-Our goals are for the future include further refinining our training model to achieve better looking results, and expanding the versality of our model to handle multiple types of objects besides just chairs. Lastly if time permits we want to implement text commands, which will generate an item depends on a text input.
-
-A possible challenge we may have is that there is too much variation in our dataset. In particular chairs have extreme variations in form. For example, some may be round, some are rectangular, some have legs, some have wheels, etc... This could potentially be overcome by increasing training time.
 
 ## Resources Used
 
