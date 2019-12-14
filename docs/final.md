@@ -24,7 +24,7 @@ If both of these conditions are true then a voxel is placed at the points. The o
 
 The model we use is a Wasserstein generative adversial netowrk (WGAN). We found this model provided us with better quality generations as compared to when we used a normal GAN model in our status report. The WGAN differes from a normal GAN in several ways. Firstly, it utilizes a Wasserstein loss function where as previously we used binary cross entropy. Wasserstein loss is defined using this function:
 
-![image1](Images/Wasserstein_Loss.PNG?raw=true)
+![image1](Images/Wasserstein_Loss.png?raw=true)
 
 ## Evaluation
 
