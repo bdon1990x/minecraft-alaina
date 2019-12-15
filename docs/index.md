@@ -11,7 +11,7 @@ Let's welcome our 3D objects builder in Minecraft: Alaina!
 Source code: [Github](https://github.com/bdon1990x/minecraft-alaina)
 
 ## Video
-[![Titile](/Images/FirstPage.png)](https://youtu.be/eLTgYg-6Mcw "Alaina: Status Report")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sxEHsrqkEUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 

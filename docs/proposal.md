@@ -14,7 +14,7 @@ of a probability for each value. The probabilities are rounded and the model is 
 
 ### AI/ML Algorithms
 
-We plan on using generative adversial networks. The dataset will be a set of 3D models, which will be voxelized so that it is more easily buildable in Minecraft. Text command could be implemented by simplying parsing the text for keywords.
+We plan on using Wasserstein Generative Adversial Networks. The dataset will be a set of 3D models, which will be voxelized so that it is more easily buildable in Minecraft. Text command could be implemented by simplying parsing the text for keywords.
 
 ### Evaluation Plan
 
@@ -23,7 +23,7 @@ We plan on using generative adversial networks. The dataset will be a set of 3D 
 - Time the agent take to finish the task.
 - Mistakes the agent made through the process.
 
-As for quantitative evualuations we will look at the training time of model.  
+As for quantitative evualuations we will look at the difference of Wasserstein loss rate between the critic (descriminator) and the generator.  
 
 #### Qualitative:
 
