@@ -4,7 +4,7 @@ title: Status
 ---
 
 ## Video
-[![Titile](/Images/FirstPage.png)](https://youtu.be/eLTgYg-6Mcw "Alaina: Status Report")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eLTgYg-6Mcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 
